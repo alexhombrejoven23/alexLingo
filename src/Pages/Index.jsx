@@ -14,6 +14,8 @@ import aboutimage from '/Images/about-image.jpg';
 
 
 
+
+
 function Index() {
     return (
         <>
@@ -105,7 +107,17 @@ function Index() {
                         </div>
                     </div>
                 </div>
+                <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
+                <img src={aboutimage} alt="about-image" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <img src={element1} alt="shape-image" className="element1 about-shape1 absolute left-10 top-30 object-contain sm:block hidden" />
+                <img src={element6} alt="shape-image" className="element5 about-shape7 absolute right-10 bottom-10 object-contain lg:block hidden" />
+                <img src={element5} alt="shape-image" className="element5 about-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden" />
+                <img src={element5} alt="shape-image" className="element5 about-shape5 absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden" />
+
             </div>
+
+            {/* Feactures */}
         </>  
     )
 }
