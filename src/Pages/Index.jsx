@@ -16,6 +16,9 @@ import featureicon1 from '../../public/Images/feature-icon1.png';
 import featureicon2 from '../../public/Images/feature-icon2.png';
 import featureicon3 from '../../public/Images/feature-icon3.png';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"
+
 
 
 function Index() {
@@ -129,6 +132,43 @@ function Index() {
                         Welcome to our diverse and dynamic course catalog. we're dedicated to providing you with access to high-quality education 
                     </p>
                 </div>
+                <Swiper
+                 slidesPerview={3}
+                    spaceBetween={20}
+                    loop={true}
+                    breakpoints={{
+                        1399: {
+                            slidesPerView: 3
+                        },
+                        1199: {
+                            slidesPerView: 2.5
+                        },
+                        767: {
+                            slidesPerView: 2
+                        },
+                        0: {
+                            slidesPerView: 1
+                        },
+                    }}
+                    className="feature-wrapper w-full"        
+                >
+                    <SwiperSlide>
+                        <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+                            <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                                <img src={featureicon1} alt="feature-icon" />
+                            </div>
+                            <div className="feature-info pt-8">
+                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                    Language Learning
+                                </h4>
+                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                    Courses teaching languages such as English, Spanish, French, Mandarin etc
+                                </p>
+                            </div>
+
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
 
         </>  
