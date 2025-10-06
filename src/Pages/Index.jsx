@@ -12,7 +12,9 @@ import about2 from '/Images/about-img2.png';
 import user from '/Images/user.png';
 import aboutimage from '/Images/about-image.jpg';
 
-
+import featureicon1 from '../../public/Images/feature-icon1.png';
+import featureicon2 from '../../public/Images/feature-icon2.png';
+import featureicon3 from '../../public/Images/feature-icon3.png';
 
 
 
@@ -118,6 +120,17 @@ function Index() {
             </div>
 
             {/* Feactures */}
+            <div className="feature flex justify-center items-center flex-col gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
+                <div className="feature-content z-2 flex flex-col text-center w-full lg:w-[60%] xl:w-[50%]">
+                    <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl md:leading-10 sora-font font-semibold">
+                        Explore 5,000+ Free Online Courses For Students
+                    </h2>
+                    <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-md">
+                        Welcome to our diverse and dynamic course catalog. we're dedicated to providing you with access to high-quality education 
+                    </p>
+                </div>
+            </div>
+
         </>  
     )
 }
