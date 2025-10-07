@@ -19,6 +19,9 @@ import featureicon3 from '../../public/Images/feature-icon3.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 
+import chooseus from '../../public/Images/chooseus.jpg'
+
+
 
 
 function Index() {
@@ -165,12 +168,142 @@ function Index() {
                                     Courses teaching languages such as English, Spanish, French, Mandarin etc
                                 </p>
                             </div>
+                        </div>
+                    </SwiperSlide>
 
+                    <SwiperSlide>
+                        <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+                            <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                                <img src={featureicon2} alt="feature-icon" />
+                            </div>
+                            <div className="feature-info pt-8">
+                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                    Creative Arts & Design 
+                                </h4>
+                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                   Courses on graphic design, digital art, photography, video editing...
+                                </p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+                            <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                                <img src={featureicon3} alt="feature-icon" />
+                            </div>
+                            <div className="feature-info pt-8">
+                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                    Health & Fitness
+                                </h4>
+                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                   Courses on nutrition, fitness, training, yoga, meditacion, wellness coaching
+                                </p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                     <SwiperSlide>
+                        <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+                            <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                                <img src={featureicon2} alt="feature-icon" />
+                            </div>
+                            <div className="feature-info pt-8">
+                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                    Creative Arts & Design 
+                                </h4>
+                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                   Courses on graphic design, digital art, photography, video editing...
+                                </p>
+                            </div>
                         </div>
                     </SwiperSlide>
                 </Swiper>
+
+                <img src={element3} alt="shape-image" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-70 top-20 hidden lg:flex" />
             </div>
 
+            {/* Why Choose */}
+            <div className="why-choose-us flex lg:flex-row flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
+                <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
+                <img src={chooseus} alt="about-image" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div className="about-content flex flex-col lg:w-1/2 w-full">
+                    <div className="flex flex-col items-center text-center">
+                        <span className="text-[#076dcb] font-semibold sora-font pb-1">
+                            <i className="bi bi-book pe-2"></i>
+                            Why Choose Us
+                        </span>
+                        <h2 className="text-[#222e48] text-3xl md:text-5xl md:leading-13 sora-font font-semibold">Our Commitment Excellence, Learn, Grow & Success</h2>
+                        <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-shadow-md">
+                            We are passionate about transforming lives through edication. Foundded with a vision to make learning accessible to all, we believe in the power of knowledge to...
+                        </p>
+                         <ul className="flex flex-col gap-6 pb-10 w-full max-w-3xl">
+                            <li className="flex gap-3 sm:flex-nowrap flex-wrap items-center">
+                                <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center items-center p-4">
+                                    <i className="bi bi-check-lg text-[#076dcb] text-2xl"></i>
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-neutral-500 text-sm lg:text-md">
+                                        9/10 Average Satisfaccion Rate
+                                    </p>
+                                </div>
+                            </li>
+                             <li className="flex gap-3 sm:flex-nowrap flex-wrap items-center">
+                                <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center items-center p-4">
+                                    <i className="bi bi-check-lg text-[#076dcb] text-2xl"></i>
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-neutral-500 text-sm lg:text-md">
+                                        96% Completion Rate
+                                    </p>
+                                </div>
+                            </li>
+                            <li className="flex gap-3 sm:flex-nowrap flex-wrap items-center">
+                                <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center items-center p-4">
+                                    <i className="bi bi-dash-lg text-[#076dcb] text-2xl"></i>
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-neutral-500 text-sm lg:text-md">
+                                        Friendly Eviroment & Expert Teacher
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div className="border-t-2 border-dotted border-[#c1c4cc] pt-5 flex items-center gap-8">
+                            <button className="btn custom-btn bg-[#076dcb] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300" type="submit">
+                                Read More
+                                <i className="bi bi-arrow-up-right ps-2"></i>
+                            </button>
+                            
+                        </div>
+                           
+                     </div>
+                </div>
+                
+                <img src={element2} alt="shape-image" className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden md:block" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-70 top-20 hidden lg:flex" />
+
+            </div>
+
+            {/* Our Achievements */}
+            <div className="our-achievements grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf663] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-people"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font">1.4K</h2>
+                        <span className="text-sm lg:text-md">Successfully Trained</span>
+                    </div>
+                </div>
+            </div>
         </>  
     )
 }
