@@ -20,6 +20,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 
 import chooseus from '../../public/Images/chooseus.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -289,12 +292,11 @@ function Index() {
                 <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
                 <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
                 <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-70 top-20 hidden lg:flex" />
-
             </div>
 
             {/* Our Achievements */}
             <div className="our-achievements grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
-                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf663] border border-[#ebecef] rounded-2xl">
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
                     <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
                         <i className="bi bi-people"></i>
                     </div>
@@ -303,6 +305,40 @@ function Index() {
                         <span className="text-sm lg:text-md">Successfully Trained</span>
                     </div>
                 </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-camera-video"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2k</h2>
+                        <span className="text-[#222e48] text-sm lg:text-md">Courses Completed</span>
+                    </div>
+                </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-hand-thumbs-up"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2.5K</h2>
+                        <span className="text-[#404a60] text-sm lg:text-md">Satisfaction Rate</span>
+                    </div>
+                </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <FontAwesomeIcon icon={faUsers}/>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">5k</h2>
+                        <span className="text-[#404a60] text-sm lg:text-md">Students Community</span>
+                    </div>
+                </div>
+
+                <img src={element5} alt="shape-image" className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element-5 hero-shape6 absolute bottom-50 left-10 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element-5 hero-shape7 absolute right-20 -top-16 hidden lg:flex" />
             </div>
         </>  
     )
