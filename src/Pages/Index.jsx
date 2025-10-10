@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import element1 from '/Images/element1.png';
 import element2 from '/Images/element2.png';
@@ -302,12 +302,12 @@ function Index() {
                         <p className="[text-[#576070] text-sm pb-2">
                             Welcome to our diverse and dynamic course catalog. we're dedicated to providing you...
                         </p>
-                        <link to='/Courses'>
+                        <Link to='/Courses'>
                             <button className="btn font-medium bg-[#076dcb] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300" type="button">
                                 See All Courses
                                 <i className="bi bi-arrow-up-right ps-2"></i>
                             </button>
-                        </link>
+                        </Link>
                     </div>
                 </div>
 
