@@ -19,15 +19,31 @@ import featureicon3 from '../../public/Images/feature-icon3.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 
-import chooseus from '../../public/Images/chooseus.jpg'
+import chooseus from '../../public/Images/chooseus.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faBorderNone, faUsers } from "@fortawesome/free-solid-svg-icons";
 
-
-
+import CoursesData from '../CoursesData.json';
+import { Link } from 'react-router-dom'
 
 function Index() {
+
+    const categories = ["All", ...Object.keys(CoursesData.Courses)];
+    const [activeCategory, setActiveCategory] = useState("All");
+    
+    const getCourses = () => {
+        if (activeCategory === "All") {
+            return Object.keys(CoursesData.Courses).flatMap((cat) => {
+                if (cat === "Marketing") return CoursesData.Courses[cat].slice(0, 2);
+                return CoursesData.Courses[cat].slice(0, 1);
+            });
+        }
+        return CoursesData.Courses[activeCategory] || [];
+    };
+
+    const courses = getCourses();
+
     return (
         <>
             {/* Hero */}
@@ -229,6 +245,160 @@ function Index() {
                 <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-70 top-20 hidden lg:flex" />
             </div>
 
+            {/* Our Achievements */}
+            <div className="our-achievements grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-people"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font">1.4K</h2>
+                        <span className="text-sm lg:text-md">Successfully Trained</span>
+                    </div>
+                </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-camera-video"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2k</h2>
+                        <span className="text-[#222e48] text-sm lg:text-md">Courses Completed</span>
+                    </div>
+                </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <i className="bi bi-hand-thumbs-up"></i>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2.5K</h2>
+                        <span className="text-[#404a60] text-sm lg:text-md">Satisfaction Rate</span>
+                    </div>
+                </div>
+
+                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+                        <FontAwesomeIcon icon={faUsers}/>
+                    </div>
+                    <div className="achievements-info">
+                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">5k</h2>
+                        <span className="text-[#404a60] text-sm lg:text-md">Students Community</span>
+                    </div>
+                </div>
+
+                <img src={element5} alt="shape-image" className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element-5 hero-shape6 absolute bottom-50 left-10 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element-5 hero-shape7 absolute right-20 -top-16 hidden lg:flex" />
+            </div>
+
+            {/* Courses */}
+            <div className="courses px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[150px] bg-[#f3f9ff] relative">
+                <div className="courses-content z-2 pt-10 lg:pt-0 flex justify-between items-center flex-col lg:flex-row w-full gap-3">
+                    <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl md:leading-10 sora-font font-semibold lg:w-[50%]">
+                        Explore 4,000+ Free Online Courses For Students
+                    </h2>
+                    <div className="lg:w-[50%] w-full">
+                        <p className="[text-[#576070] text-sm pb-2">
+                            Welcome to our diverse and dynamic course catalog. we're dedicated to providing you...
+                        </p>
+                        <link to='/Courses'>
+                            <button className="btn font-medium bg-[#076dcb] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300" type="button">
+                                See All Courses
+                                <i className="bi bi-arrow-up-right ps-2"></i>
+                            </button>
+                        </link>
+                    </div>
+                </div>
+
+                <div className="flex flex-wrap gap-3 my-8 bg-white p-5 rounded-xl shadow-xl">
+                    {categories.map((category) => {
+                        <button key={category} onClick={() => setActiveCategory(category)} className={`px-4 py-3 shadow-md rounded-full text-sm cursor-pointer font-medium transition ${
+                            activeCategory === category 
+                            ? "bg-blue-500 text-white shadow-md" 
+                            : "bg-[#f3f9ff] text-[#404a60]"
+                        }`}>
+                            {category}
+                        </button>
+                     })}
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    {courses.length > 0 ? (
+                        courses.map((course) => (
+                            <div key={course.title} className="course-item bg-white p-3 rounded-xl group hover:shadow-lg transition z-2 relative">
+                                <div className="course-image h-[230px] rounded-xl overflow-hidden relative bg-gray-200">
+                                    <div className="absolute inset-0 animate-pulse bg-gray-300"></div>
+                                    <img 
+                                        src={course.CourseImage} 
+                                        alt={course.title} 
+                                        loading="lazy"
+                                        className="relative z-10 group-hover:scale-110 transition-all duration-500 h-500 w-full object-cover"
+                                        onLoad={(e) => {
+                                            e.target.previousSibling.style.display = "none"
+                                        }}
+                                    />
+                                </div>
+
+                                <div className="course-content p-3">
+                                    <h4 className="my-3 sora-font font-bold text-md sm:text-xl text-[#222e48] hover:text-[#006dca] transition-colors duration-500">
+                                        {course.title}
+                                    </h4>
+                                    <div className="flex justify-between items-center gap-2 mb-2">
+                                        <div className="text-[#222e48] font-medium">
+                                            <i className="bi bi-camera-video pe-2 text-lg"></i>
+                                            <span>{course.lessons} Lessons</span>
+                                        </div>
+                                         <div className="text-[#222e48] font-medium">
+                                            <i className="bi bi-bar-chart pe-2 text-lg"></i>
+                                            <span>{course.level}</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-between items-center gap-2 mb-4">
+                                        <div className="text-[#222e48] font-medium">
+                                            <i className="bi bi-star-fill text-yellow-400 pe-2"></i>
+                                            <span>
+                                                {course.rating}{""}
+                                                <span className="text-[#798090] text-sm">
+                                                    ({course.reviews})
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div className="text-[#222e48] font-medium flex items-center">
+                                            <img
+                                                src={course.InstructorImage}
+                                                alt={course.Instructor}
+                                                loading="lazy"
+                                                className="rounded-[50%] h-[45px] w-[45px] object-cover pe-1"
+                                            />
+                                            <span>{course.instructor}</span>
+                                        </div>
+                                    </div>
+                                    <div className="border-t-2 border-dotted border-[#c1c4cc] pt-5 flex items-center justify-between gap-8">
+                                        <h4 className="text-[#f37739] text-2xl font-semibold">${course.price}</h4>
+                                        <button className="btn font-medium text-[#076dcb] hover:text-black rounded-full w-fit text-sm cursor-pointer transition-colors duration-300" type='button'>
+                                            {course.enrollLink}
+                                            <i className="bi bi-arrow-up-right ps-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="col-span-full text-center text-gray-600">
+                            No course available
+                        </p>
+                    )}
+                </div> 
+
+                <img src={element1} alt="shape-image" className="element1 hero-shaped absolute left-30 top-30 object-contain hidden lg:block" />
+                <img src={element2} alt="shape-image" className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden lg:block" />
+                <img src={element3} alt="shape-image" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
+                <img src={element4} alt="shape-image" className="element4 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block" />
+
+            </div>
+
+
             {/* Why Choose */}
             <div className="why-choose-us flex lg:flex-row flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
                 <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
@@ -292,53 +462,6 @@ function Index() {
                 <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
                 <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
                 <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-70 top-20 hidden lg:flex" />
-            </div>
-
-            {/* Our Achievements */}
-            <div className="our-achievements grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
-                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
-                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
-                        <i className="bi bi-people"></i>
-                    </div>
-                    <div className="achievements-info">
-                        <h2 className="text-[#222e48] text-3xl font-bold sora-font">1.4K</h2>
-                        <span className="text-sm lg:text-md">Successfully Trained</span>
-                    </div>
-                </div>
-
-                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
-                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
-                        <i className="bi bi-camera-video"></i>
-                    </div>
-                    <div className="achievements-info">
-                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2k</h2>
-                        <span className="text-[#222e48] text-sm lg:text-md">Courses Completed</span>
-                    </div>
-                </div>
-
-                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
-                    <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
-                        <i className="bi bi-hand-thumbs-up"></i>
-                    </div>
-                    <div className="achievements-info">
-                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">2.5K</h2>
-                        <span className="text-[#404a60] text-sm lg:text-md">Satisfaction Rate</span>
-                    </div>
-                </div>
-
-                <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
-                    <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
-                        <FontAwesomeIcon icon={faUsers}/>
-                    </div>
-                    <div className="achievements-info">
-                        <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">5k</h2>
-                        <span className="text-[#404a60] text-sm lg:text-md">Students Community</span>
-                    </div>
-                </div>
-
-                <img src={element5} alt="shape-image" className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
-                <img src={element5} alt="shape-image" className="element-5 hero-shape6 absolute bottom-50 left-10 w-[25px] h-[25px] hidden sm:flex" />
-                <img src={element6} alt="shape-image" className="element-5 hero-shape7 absolute right-20 -top-16 hidden lg:flex" />
             </div>
         </>  
     )
