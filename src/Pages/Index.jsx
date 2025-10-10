@@ -394,8 +394,10 @@ function Index() {
                 <img src={element1} alt="shape-image" className="element1 hero-shaped absolute left-30 top-30 object-contain hidden lg:block" />
                 <img src={element2} alt="shape-image" className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden lg:block" />
                 <img src={element3} alt="shape-image" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
-                <img src={element4} alt="shape-image" className="element4 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block" />
-
+                <img src={element4} alt="shape-image" className="element3 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-50 top-20 hidden lg:flex" />
             </div>
 
 
