@@ -5,14 +5,18 @@ import Index from "./Pages/Index";
 
 
 function App() {
+  const location = useLocation();
+  const isHome = location.pathname
 
 
   return (
-    <>
-    <Nav/>
-    <Routes>
-      <Route path='/' element={<Index/>}></Route>
-    </Routes>
+    <> 
+      <div className={isHome ? "home-page" : ""}>
+        <Nav/>
+        <Routes>
+          <Route path='/' element={<Index/>}></Route>
+          </Routes>
+      </div>
     </>
   )
 }
