@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "bootstrap-icons/font/bootstrap-icons.css";
 import element1 from '/Images/element1.png';
 import element2 from '/Images/element2.png';
@@ -23,8 +22,7 @@ import "swiper/css"
 import chooseus from '../../public/Images/chooseus.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faBorderNone, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-regular-svg-icons";
 
 import CoursesData from '../CoursesData.json';
 import { Link } from 'react-router-dom'
@@ -42,7 +40,7 @@ function Index() {
             });
         }
         return CoursesData.Courses[activeCategory] || [];
-    };
+    }
 
     const courses = getCourses();
 
@@ -157,7 +155,7 @@ function Index() {
                     </p>
                 </div>
                 <Swiper
-                 slidesPerview={3}
+                 slidesPerView={3}
                     spaceBetween={20}
                     loop={true}
                     breakpoints={{
@@ -301,7 +299,7 @@ function Index() {
                         Explore 4,000+ Free Online Courses For Students
                     </h2>
                     <div className="lg:w-[50%] w-full">
-                        <p className="[text-[#576070] text-sm pb-2">
+                        <p className="text-[#576070] text-sm pb-2">
                             Welcome to our diverse and dynamic course catalog. we're dedicated to providing you...
                         </p>
                         <Link to='/Courses'>
@@ -316,13 +314,12 @@ function Index() {
                 <div className="flex flex-wrap gap-3 my-8 bg-white p-5 rounded-xl shadow-xl">
                     {categories.map((category) => {
                         return (
-                        <button key={category} onClick={() => setActiveCategory(category)} className={`px-4 py-3 shadow-md rounded-full text-sm cursor-pointer font-medium transition ${
+                            <button key={category} onClick={() => setActiveCategory(category)} className={`px-4 py-3 shadow-md rounded-full text-sm cursor-pointer font-medium transition ${
                             activeCategory === category 
                             ? "bg-blue-500 text-white shadow-md" 
-                            : "bg-[#f3f9ff] text-[#404a60]"
-                        }`}>
-                            {category}
-                        </button>
+                            : "bg-[#f3f9ff] text-[#404a60]"}`}>
+                                {category}
+                            </button>
                         )
                      })}
                 </div>
@@ -339,7 +336,7 @@ function Index() {
                                         loading="lazy"
                                         className="relative z-10 group-hover:scale-110 transition-all duration-500 h-500 w-full object-cover"
                                         onLoad={(e) => {
-                                            e.target.previousSibling.style.display = "none"
+                                            e.target.previoussibling.style.display = "none"
                                         }}
                                     />
                                 </div>
@@ -418,19 +415,19 @@ function Index() {
                     <h2 className="text-[#222e48] text-3xl md:leading-10 sora-font font-semibold">
                         Our Commitment to Excellence, Learn, Grow & Success.
                     </h2>
-                    <p className="[text-[#576070] pt-3 pb-5 text-sm sm:text-md">
+                    <p className="text-[#576070] pt-3 pb-5 text-sm sm:text-md">
                         We are passionate about transforming lives through education. Founded with a vision to make learning accessible to all, we believe in the power of knowledge to..
                     </p>
                     <ul className="flex flex-col gap-2 pb-5">
-                        <li className="text-sm [text-[#576070]">
+                        <li className="text-sm text-[#576070]">
                             <i className="bi bi-check-all text-[#006dca] pe-2 text-x1"></i>
                             9/10 Average Satisfaction Rate
                         </li>
-                        <li className="text-sm [text-[#576070]">
+                        <li className="text-sm text-[#576070]">
                             <i className="bi bi-check-all text-[#006dca] pe-2 text-x1"></i>
                             96% Complettiation Rate
                         </li>
-                        <li className="text-sm [text-[#576070]">
+                        <li className="text-sm text-[#576070]">
                             <i className="bi bi-check-all text-[#006dca] pe-2 text-x1"></i>
                             Friendly Enviroment & Expert Teacher
                         </li>

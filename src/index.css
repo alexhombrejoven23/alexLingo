@@ -305,10 +305,8 @@ body {
 
 }
 
-
-
 /* Courses */
-.coutses::after {
+.courses::after {
     content: '';
     position: absolute;
     top: -50px;
