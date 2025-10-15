@@ -27,6 +27,10 @@ import { faUsers } from "@fortawesome/free-regular-svg-icons";
 import CoursesData from '../CoursesData.json';
 import { Link } from 'react-router-dom'
 
+import articlel from '../../public/Images/articles-01.jpg';
+import article2 from '../../public/Images/articles-02.jpg';
+import article3 from '../../public/Images/articles-03.jpg';
+
 function Index() {
 
     const categories = ["All", ...Object.keys(CoursesData.Courses)];
@@ -40,7 +44,7 @@ function Index() {
             });
         }
         return CoursesData.Courses[activeCategory] || [];
-    }
+    };
 
     const courses = getCourses();
 
@@ -79,9 +83,7 @@ function Index() {
                 <img src={element4} alt="shape-image" className="element4 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block" />
                 <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
                 <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
-                <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-50 top-20 w-[25px] hidden lg:flex"/>
-                
-   
+                <img src={element6} alt="shape-image" className="element5 hero-shape7 absolute right-50 top-20 w-[25px] hidden lg:flex"/>             
             </div>
 
             {/* About */}
@@ -141,7 +143,6 @@ function Index() {
                 <img src={element6} alt="shape-image" className="element5 about-shape7 absolute right-10 bottom-10 object-contain lg:block hidden" />
                 <img src={element5} alt="shape-image" className="element5 about-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden" />
                 <img src={element5} alt="shape-image" className="element5 about-shape5 absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden" />
-
             </div>
 
             {/* Feactures */}
@@ -336,7 +337,7 @@ function Index() {
                                         loading="lazy"
                                         className="relative z-10 group-hover:scale-110 transition-all duration-500 h-500 w-full object-cover"
                                         onLoad={(e) => {
-                                            e.target.previoussibling.style.display = "none"
+                                            e.target.previousSibling.style.display = "none"
                                         }}
                                     />
                                 </div>
@@ -446,6 +447,146 @@ function Index() {
             </div>
 
             {/* Articles */}
+            <div className="articles bg-[#f3f9ff] px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative gap-10 flex flex-col">
+                <div className="articles-content flex flex-col lg:w-1/2 w-full mx-auto text-center z-2">
+                <span className="[text-[#076dcb] font-semibold sora-font pb-1">
+                    <i className="bi bi-book pe-2"></i>
+                    Articles
+                    </span>
+                    <h2 className="[text-[#222e48] text-3x1 md:text-3x1 md:leading-10 sora-font font-semibold">Recent Articles</h2>
+                    <p className="text-[#576070] pt-3 pb-5 text-sm sm:text-md">
+                        Consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad..
+                    </p>
+                </div>
+
+                <div className="articles-wrapper grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-8 z-2">
+                    <div className="articles-item bg-white p-5 pb-3 rounded-xl group shadow-lg">
+                        <div className="articles-image w-full rounded-xl overflow-hidden">
+                            <img src={article1} alt="articles-image" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+                        </div>
+                        <div className="articles-content py-5">
+                            <span className="bg-[#f37638] text-white rounded-sm px-2 chakrapetch-font font-semibold py-1">Student life</span>
+                            <h4 className="my-3 sora-font font-semibold text-md sm:text-xl text-[#222648] hover:text-[#006dca] transition-colors duration-500">
+                                The Importance of Diversity in Higher Education
+                            </h4>
+
+                            <div className="flex flex-wrap gap-3">
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faUserCircle} className="pe-1"/>
+                                    <span>Pradip</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faCalendar} className="pe-1"/>
+                                    <span>10 October, 25</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faMessage} className="pe-1"/>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <p className="text-sm py-2 [text-[#404a60] pb-5">
+                                Unlock the secrets to effective time management in the digital learning space...
+                            </p>
+                            <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
+                                <link to="/blog">
+                                <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
+                                    Read More
+                                    <i className="bi bi-arrow-up-right ps-2"></i>
+                                </button>
+                                </link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="articles-item bg-white p-5 pb-3 rounded-xl group shadow-lg">
+                        <div className="articles-image w-full rounded-xl overflow-hidden">
+                            <img src={article2} alt="articles-image" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+                        </div>
+                        <div className="articles-content py-5">
+                            <span className="bg-[#16a34a] text-white rounded-sm px-2 chakrapetch-font font-semibold py-1">Freedom</span>
+                            <h4 className="my-3 sora-font font-semibold text-md sm:text-xl text-[#222648] hover:text-[#006dca] transition-colors duration-500">
+                                The Importance of Diversity in Higher Education
+                            </h4>
+
+                            <div className="flex flex-wrap gap-3">
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faUserCircle} className="pe-1"/>
+                                    <span>Megha</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faCalendar} className="pe-1"/>
+                                    <span>12 October, 25</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faMessage} className="pe-1"/>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <p className="text-sm py-2 [text-[#404a60] pb-5">
+                                Unlock the secrets to effective time management in the digital learning space...
+                            </p>
+                            <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
+                                <link to="/blog">
+                                <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
+                                    Read More
+                                    <i className="bi bi-arrow-up-right ps-2"></i>
+                                </button>
+                                </link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="articles-item bg-white p-5 pb-3 rounded-xl group shadow-lg">
+                        <div className="articles-image w-full rounded-xl overflow-hidden">
+                            <img src={article1} alt="articles-image" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+                        </div>
+                        <div className="articles-content py-5">
+                            <span className="bg-[#f37638] text-white rounded-sm px-2 chakrapetch-font font-semibold py-1">Oneline</span>
+                            <h4 className="my-3 sora-font font-semibold text-md sm:text-xl text-[#222648] hover:text-[#006dca] transition-colors duration-500">
+                                The Importance of Diversity in Higher Education
+                            </h4>
+
+                            <div className="flex flex-wrap gap-3">
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faUserCircle} className="pe-1"/>
+                                    <span>Mihir</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faCalendar} className="pe-1"/>
+                                    <span>18 October, 25</span>
+                                </div>
+                                <div className="text-[#404a60] text-md font-medium">
+                                    <FontAwesomeIcon icon={faMessage} className="pe-1"/>
+                                    <span>26</span>
+                                </div>
+                            </div>
+                            <p className="text-sm py-2 [text-[#404a60] pb-5">
+                                Unlock the secrets to effective time management in the digital learning space...
+                            </p>
+                            <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
+                                <link to="/blog">
+                                <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
+                                    Read More
+                                    <i className="bi bi-arrow-up-right ps-2"></i>
+                                </button>
+                                </link>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <img src={element1} alt="shape-image" className="element1 hero-shape1 absolute left-30 top-30 object-contain hidden md:block" />
+                <img src={element2} alt="shape-image" className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden md:block" />
+                <img src={element3} alt="shape-image" className="element3 hero-shape3 absolute right-96 bottom-10 z-1 object-contain hidden lg:block" />
+                <img src={element4} alt="shape-image" className="element4 hero-shape4 absolute right-40 bottom-50 z-0 object-contain hidden lg:block" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+                <img src={element5} alt="shape-image" className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
+                <img src={element6} alt="shape-image" className="element5 hero-shape6 absolute right-50 top-20 hidden lg:flex z-2" />
+
+            </div>
         </>  
     )
 }

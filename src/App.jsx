@@ -5,16 +5,16 @@ import Index from "./Pages/Index";
 
 
 function App() {
-
-
+ 
 
   return (
-    <> 
-      
+    <>
+      <BrowserRouter>
         <Nav/>
         <Routes>
           <Route path='/' element={<Index/>}></Route>
-          </Routes>
+        </Routes>
+      </BrowserRouter>
       
     </>
   )
@@ -22,9 +22,3 @@ function App() {
 
 
 export default App
-{/*
-const location = useLocation();
- const isHome = location.pathname
-<div className={isHome ? "home-page" : ""}>
-</div>
-*/}
