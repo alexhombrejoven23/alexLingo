@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 import element1 from '/Images/element1.png';
 import element2 from '/Images/element2.png';
 import element3 from '/Images/element3.png';
@@ -22,7 +24,7 @@ import "swiper/css"
 import chooseus from '../../public/Images/chooseus.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faUsers } from "@fortawesome/free-regular-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 import CoursesData from '../CoursesData.json';
 import { Link } from 'react-router-dom'
@@ -30,6 +32,7 @@ import { Link } from 'react-router-dom'
 import articlel from '../../public/Images/articles-01.jpg';
 import article2 from '../../public/Images/articles-02.jpg';
 import article3 from '../../public/Images/articles-03.jpg';
+
 
 function Index() {
 
@@ -213,10 +216,10 @@ function Index() {
                                 <img src={featureicon3} alt="feature-icon" />
                             </div>
                             <div className="feature-info pt-8">
-                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
                                     Health & Fitness
                                 </h4>
-                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                <p className="text-[#576070] text-sm  group-hover:text-white">
                                    Courses on nutrition, fitness, training, yoga, meditacion, wellness coaching
                                 </p>
                             </div>
@@ -229,10 +232,10 @@ function Index() {
                                 <img src={featureicon2} alt="feature-icon" />
                             </div>
                             <div className="feature-info pt-8">
-                                <h4 className="[text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
+                                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold  group-hover:text-white">
                                     Creative Arts & Design 
                                 </h4>
-                                <p className="[text-[#576070] text-sm  group-hover:text-white">
+                                <p className="text-[#576070] text-sm  group-hover:text-white">
                                    Courses on graphic design, digital art, photography, video editing...
                                 </p>
                             </div>
@@ -488,12 +491,12 @@ function Index() {
                                 Unlock the secrets to effective time management in the digital learning space...
                             </p>
                             <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
-                                <link to="/blog">
+                                <Link to="/blog">
                                 <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
                                     Read More
                                     <i className="bi bi-arrow-up-right ps-2"></i>
                                 </button>
-                                </link>
+                                </Link>
                             </div>
 
                         </div>
@@ -527,12 +530,12 @@ function Index() {
                                 Unlock the secrets to effective time management in the digital learning space...
                             </p>
                             <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
-                                <link to="/blog">
+                                <Link to="/blog">
                                 <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
                                     Read More
                                     <i className="bi bi-arrow-up-right ps-2"></i>
                                 </button>
-                                </link>
+                                </Link>
                             </div>
 
                         </div>
@@ -566,12 +569,12 @@ function Index() {
                                 Unlock the secrets to effective time management in the digital learning space...
                             </p>
                             <div className="border-t-2 border-dotted █border-[#c1c4cc] pt-5">
-                                <link to="/blog">
+                                <Link to="/blog">
                                 <button className="btn custom-btn text-[#076dcb] font-medium rounded-full w-fit text-sm cursor-pointer" type='button'>
                                     Read More
                                     <i className="bi bi-arrow-up-right ps-2"></i>
                                 </button>
-                                </link>
+                                </Link>
                             </div>
 
                         </div>

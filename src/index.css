@@ -251,18 +251,6 @@ body {
     padding: 30px 0 !important;
 }
 
-/* Why Choose */
-
-.why-choose-us::after {
-    content: '';
-    position: absolute;
-    top: -250px;
-    left: 0;
-    width: 100%;
-    height: 250px;
-    background-image: url(../public/Images/cloud-shap-img1.png);
-}
-
 /* Our Achievements */
 
 .our-achievements::after {
@@ -317,34 +305,42 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    z-index: 0;
 }
 
-.feature-item:hover .feature-icon img {
-    animation: bounce 1s;
+/* Why Choose */
+
+.why-choose-us::after {
+    content: '';
+    position: absolute;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-image: url(../public/Images/cloud-shap-img1.png);
 }
 
-@keyframes bounce {
-    0%,
-    20%,
-    53%,
-    100% {
-        transform: translateZ(0);
-    }
-    
-    40%, 
-    43% {
-       transform: translate3d(0, -30px, 0) scaleV(1.1);
-    }
-    
-    80% {
-        transform: translateZ(0) scaleV(0.95);
-    }
-    
-    96% {
-        transform: translate3d(0, -4px, 0) scaleY(1.02);
+/* Articles */
+
+.aticles {
+    position: relative;
+}
+
+.articles::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-image: url(../public/Images/cloud-shap-img2.png);
+}
+
+@media screen and (max-width: 991.98px) {
+    .articles::after {
+        top: -78px;
+        height: 250px;
     }
 }
 
-.feature-wrapper {
-    padding: 30px 0 !important;
-}
